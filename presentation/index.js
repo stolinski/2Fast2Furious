@@ -12,6 +12,7 @@ import {
   List,
   Quote,
   Slide,
+  Link,
   Text,
   Layout,
   Fill,
@@ -35,6 +36,7 @@ const images = {
   robocop: require('../assets/roboop.gif'),
   buyMyBook: require('../assets/buyMyBook.gif'),
   homer: require('../assets/homer.gif'),
+  airborn: require('../assets/airborn.gif'),
   fast: require('../assets/2fast.gif')
 };
 
@@ -94,10 +96,15 @@ export default class Presentation extends React.Component {
           <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
             @stolinski @leveluptuts
           </Text>
+          <Link href="https://2fast2furious.netlify.com">
+            <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
+              @stolinski @leveluptuts
+            </Text>
+          </Link>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
           <Fill>
-            <Image src={images.fast} />
+            <Image width={'100%'} src={images.fast} />
           </Fill>
         </Slide>
         <Slide
@@ -112,10 +119,14 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout style={{ alignItems: 'center' }}>
             <Fill>
-              <Image src={images.lut} />
+              <Link href="https://www.leveluptutorials.com/">
+                <Image src={images.lut} />
+              </Link>
             </Fill>
             <Fill>
-              <Image src={images.syntax} />
+              <Link href="https://syntax.fm/">
+                <Image src={images.syntax} />
+              </Link>
             </Fill>
           </Layout>
         </Slide>
@@ -242,7 +253,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="primary" textFont="secondary">
             Build Your Foundation
           </Heading>
-          {/* Jackie Chan Gif */}
+          <Image src={images.airborn} />
         </Slide>
         <Slide
           transition={['slide']}
@@ -331,7 +342,7 @@ export default class Presentation extends React.Component {
               Turtle Time
             </Heading>
             <ListItem>
-              Future learning speed is a slowed by not having proper context
+              Future learning speed is slowed by not having proper context
             </ListItem>
           </List>
         </Slide>
@@ -447,7 +458,7 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="Youre going to hear how people who talk about this stuff talk."
+          notes="This is my They Live slides. Youre going to hear how people who talk about this stuff talk."
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -481,8 +492,8 @@ export default class Presentation extends React.Component {
             Support
           </Heading>
           <Image src={images.buyMyBook} />
-          <Text>Subscribe or Buy</Text>
-          <Text>LevelUpTutorials.com</Text>
+          <Text textColor="#FFF">Subscribe or Buy</Text>
+          <Text textColor="#FFF">LevelUpTutorials.com</Text>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} textColor="secondary" textFont="secondary">
