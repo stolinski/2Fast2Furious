@@ -96,9 +96,9 @@ export default class Presentation extends React.Component {
           <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
             @stolinski @leveluptuts
           </Text>
-          <Link href="https://2fast2furious.netlify.com">
+          <Link href="https://2fast2furious.netlify.com" target="_blank">
             <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
-              @stolinski @leveluptuts
+              2fast2furious.netlify.com
             </Text>
           </Link>
         </Slide>
@@ -119,12 +119,12 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout style={{ alignItems: 'center' }}>
             <Fill>
-              <Link href="https://www.leveluptutorials.com/">
+              <Link href="https://www.leveluptutorials.com/" target="_blank">
                 <Image src={images.lut} />
               </Link>
             </Fill>
             <Fill>
-              <Link href="https://syntax.fm/">
+              <Link href="https://syntax.fm/" target="_blank">
                 <Image src={images.syntax} />
               </Link>
             </Fill>
