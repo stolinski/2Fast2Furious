@@ -484,8 +484,12 @@ export default class Presentation extends React.Component {
           <Text>Twitter & IG</Text>
           <Text>@stolinski / @leveluptuts</Text>
           <Text>Level Up Tutorials Youtube</Text>
-          <Text>LevelUpTutorials.com</Text>
-          <Text>Syntax.fm</Text>
+          <Link href="https://www.leveluptutorials.com/" target="_blank">
+            <Text>LevelUpTutorials.com</Text>
+          </Link>
+          <Link href="https://syntax.fm/" target="_blank">
+            <Text>Syntax.fm</Text>
+          </Link>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} textColor="secondary" textFont="secondary">
@@ -493,7 +497,9 @@ export default class Presentation extends React.Component {
           </Heading>
           <Image src={images.buyMyBook} />
           <Text textColor="#FFF">Subscribe or Buy</Text>
-          <Text textColor="#FFF">LevelUpTutorials.com</Text>
+          <Link href="https://www.leveluptutorials.com/store" target="_blank">
+            <Text textColor="#FFF">LevelUpTutorials.com</Text>
+          </Link>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
           <Heading size={1} textColor="secondary" textFont="secondary">
