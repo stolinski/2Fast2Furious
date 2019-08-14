@@ -18,12 +18,8 @@ import {
   Fill,
   Image
 } from 'spectacle';
-
-// Import theme
 import createTheme from 'spectacle/lib/themes/default';
-
 import preloader from 'spectacle/lib/utils/preloader';
-// Require CSS
 require('normalize.css');
 
 const images = {
@@ -34,7 +30,6 @@ const images = {
   chris: require('../assets/chris.gif'),
   sk8: require('../assets/sk8.gif'),
   robocop: require('../assets/roboop.gif'),
-  buyMyBook: require('../assets/buyMyBook.gif'),
   homer: require('../assets/homer.gif'),
   airborn: require('../assets/airborn.gif'),
   fast: require('../assets/2fast.gif')
@@ -76,8 +71,10 @@ export default class Presentation extends React.Component {
         <Slide
           transition={['slide']}
           bgColor="primary"
-          notes="Im going to be talking about learning fast. But this is more of a developer focused talk, JavaScript specifically. So this wont be a scientific look into leraningm, but actionable techniques for improving learning speed and quality in js <br/>
-          Despite the name, there will not be any fast and furious gifs in this talk.
+          notes="* Intro. Hey what's up.. <br /><br />
+          * Today I'm going to be sharing my secrets about learning fast. <br /><br />
+          * Somethin that has become increasingly important as our industry changes and grows<br /><br />
+          * Despite the name, there will not be any fast and furious gifs in this talk, this is going to be serious.
         "
         >
           <Heading
@@ -96,11 +93,6 @@ export default class Presentation extends React.Component {
           <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
             @stolinski @leveluptuts
           </Text>
-          <Link href="https://2fast2furious.netlify.com" target="_blank">
-            <Text margin="4rem 0 0" textColor="tertiary" size={1} bold>
-              2fast2furious.netlify.com
-            </Text>
-          </Link>
         </Slide>
         <Slide transition={['slide']} bgColor="primary">
           <Fill>
@@ -110,9 +102,11 @@ export default class Presentation extends React.Component {
         <Slide
           transition={['slide']}
           bgColor="primary"
-          notes="If you I've seen me before it's probably from one of these two things<br /><br />
-          I created Level Up Tutorials where I've made thousands of both free and premium video tutorials that have gained over 22million views on Youtube<br /><br />
-          I also host a weekly full stack podcast with Wes Bos called Syntax. We dive into all kinds of topics from React to Softskills and more."
+          notes="* If you I've seen me before it's probably from one of these two things<br /><br />
+          * I created Level Up Tutorials<br /><br />
+          * Tutorial streaming service <br /><br />
+          * I've made over 2,000 of both free and premium video tutorials that have gained over 22million views on Youtube<br /><br />
+          * I also co-host a weekly full stack podcast with Wes Bos called Syntax.<br /><br />"
         >
           <Heading size={1} textColor="secondary" textFont="secondary">
             Who Am I?
@@ -132,78 +126,21 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide
           transition={['slide']}
-          bgColor="tertiary"
-          textColor="primary"
-          notes="I've created over 2,000 some tutorials, I've had to make learning a priority.<br/><br/>
-          I also host a weekly fullstack podcast where we are covering a wide range of topics that I have to be knowledgable.<br /><br/>
-          For better or worse, I am constantly re-writing my codebase and it's pretty sick"
-        >
-          <Heading size={1} textColor="secondary" textFont="secondary">
-            Legitimizer
-          </Heading>
-          <List style={{ listStyle: 'none' }}>
-            <Appear>
-              <ListItem>Created over 2,000 video tutorials</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Records a weekly fullstack podcast</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>I'm obsessed with keeping codebase current</ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide
-          transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="So why does this matter? You might be thinking that I'm not a podcast host, I don't make tutorials."
-        >
-          <Heading size={1} textColor="secondary" textFont="secondary">
-            Why does this matter?
-          </Heading>
-        </Slide>
-        <Slide
-          transition={['slide']}
-          bgColor="primary"
-          textColor="tertiary"
-          notes="1,000 new JS frameworks<br />
-          Current platforms are always evolving, job postings changing constantly. <br />
-          Web development becoming so much more than html/css/js<br />
-          New shiny things aren't always worthless
-        "
-        >
-          <List style={{ listStyle: 'none' }}>
-            <Appear>
-              <ListItem>1,000 new JS frameworks</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Current platforms are always evolving, job postings changing
-                constantly.
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Web development becoming so much more than html/css/js
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>New shiny things aren't always worthless</ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide
-          transition={['slide']}
-          bgColor="primary"
-          textColor="tertiary"
-          notes="So for the rest of the talk, I'll be giving you 6 actionable steps to improve your learning"
+          notes="* Since I basically learn web dev for a living, it's crucial that I learn things fast and efficiently.<br /><br />
+          So in this talk I'll be giving you 6 steps for learning things fast."
         >
           <Heading size={1} textColor="secondary" textFont="secondary">
             6 Steps for skillz
           </Heading>
         </Slide>
-        <Slide transition={['slide']} bgColor="secondary" textColor="primary">
+        <Slide
+          transition={['slide']}
+          bgColor="secondary"
+          textColor="primary"
+          notes="I love this gif for this step because it shows both external and internal exploration."
+        >
           <Heading size={3} textColor="tertiary" textFont="secondary">
             Step 1.
           </Heading>
@@ -216,28 +153,34 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="I've heard too many people say This is the way, blogs suck for learning, videos suck for learning.<br/>
-          I have a poor working memory, makes reading really tough"
+          notes="
+          * You'll often see people making claims about different educational mediums link Video tutorials are bad for learning, or this or that isn't efficient for learning<br /><br />
+          * This is totally wrong. The reality is we all learn differently. SO in this step we need to explore our own learning strategies <br /><br />
+          * You need to pay attention to what is working for you.<br /><br />
+          * I got lucky for this one, my wife Courtney is a Dr of EDU psych and because of that I've had every psychological test known to man done to me<br /> <br />
+          * Bad short term memory, eyes gloss over for blogs<br /><br />
+          * So what you need to do, is pay attention to what works best for you and don't force what doesn't work<br /><br />
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               Style
             </Heading>
-            <ListItem>Find your preferred style of learning</ListItem>
-            <ListItem style={{ fontSize: '3rem' }}>Docs</ListItem>
-            <ListItem style={{ fontSize: '3rem' }}>Source</ListItem>
-            <ListItem style={{ fontSize: '3rem' }}>Blogs</ListItem>
-            <ListItem style={{ fontSize: '3rem' }}>
-              Youtube Channels / Videos Tutorials
-            </ListItem>
-            <ListItem style={{ fontSize: '3rem' }}>Podcasts</ListItem>
+            <ListItem>Docs</ListItem>
+            <ListItem>Source</ListItem>
+            <ListItem>Blogs</ListItem>
+            <ListItem>Video</ListItem>
+            <ListItem>Quizzes</ListItem>
+            <ListItem>Apps</ListItem>
+            <ListItem>Podcasts</ListItem>
           </List>
         </Slide>
         <Slide
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes=""
+          notes="* Likewise you'll need to take stock of your learning resources <br /><br />
+          * Follow people and consume there media"
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -246,7 +189,13 @@ export default class Presentation extends React.Component {
             <ListItem>Find your preferred learning resources</ListItem>
           </List>
         </Slide>
-        <Slide transition={['slide']} bgColor="secondary" textColor="primary">
+        <Slide
+          transition={['slide']}
+          bgColor="secondary"
+          textColor="primary"
+          notes="* Focus on the stuff you can take with you<br /><br />
+          * Like Michel Goosen here you'll be able to go from topic to topic easily"
+        >
           <Heading size={3} textColor="tertiary" textFont="secondary">
             Step 2.
           </Heading>
@@ -259,47 +208,39 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="everyone want's to learn the flashy stuff, but withouth foundation, your house will collapse."
+          notes="* We used to say with out foundation, your house will collapse. <br /><br />
+            * So here, we're going to want to put focus onto our fundamental skills js, css, html<br /><br />
+            * These are skills you can improve no matter what you are working on.<br /><br />
+            * Frameworks matter less when your JS is strong<br /><br />
+            * People in yt comments talking about .map being a react thing<br /><br />
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               *Fun*damentals
             </Heading>
-            <Appear>
-              <ListItem>Core HTML, CSS, JS & Programming Fundamentals</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Without a strong foundation, your house will collapse
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>You can always be improving your foundation</ListItem>
-            </Appear>
+            <ListItem>Core HTML, CSS, JS & Programming Fundamentals</ListItem>
+            <ListItem>Can always improve your foundation</ListItem>
+            <ListItem>Frameworks matter less when your JS is strong</ListItem>
           </List>
         </Slide>
         <Slide
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="focus on things you cna take with you<br />People in yt comments talking about .map being a react thing<br />
-          Frameworks matter less when your JS is strong<br />
-          Use native libs wherever possible over platform libs<br />
-          THink about a lib that you used recently that could have been just a js lib instead of an React lib<br />
-          Chances are that JS lib is more supported and less likely to go away"
+          notes="
+          * Focus on things you can take with you.<br /><br />
+          * Use native libs wherever possible over platform libs (where it makes sense <br /><br />
+          * Think about a lib that you used recently that could have been just a js lib instead of an React lib<br /><br />
+          * Chances are that JS lib is more supported and less likely to go away
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               Native
             </Heading>
-            <Appear>
-              <ListItem>Frameworks matter less when your JS is strong</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Use native libs wherever possible over platform libs
-              </ListItem>
-            </Appear>
+            <ListItem>Focus on things you can take with you</ListItem>
+            <ListItem>Use native libs wherever it makes sense</ListItem>
           </List>
         </Slide>
         <Slide transition={['slide']} bgColor="secondary" textColor="primary">
@@ -315,19 +256,21 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="This advice applies more to major platorms (react, redux rather than smaller ones like styled-components, routing)
-          learn react first <br />
-          then react + redux<br />
-          then react + apollo<br />"
+          notes="
+          * Learn core platforms in isolation
+          * Major platorms (react, redux rather than smaller ones like styled-components, routing)<br /><br />
+          * learn react first <br /><br />
+          * then react + redux<br /><br />
+          * then react + apollo<br /><br />
+          * Why? Because context is key when trying to learn<br /><br />
+          * When you don't know the boundaries between what you're learning you don't learn the indivdual components.
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               Context Is Key
             </Heading>
-            <ListItem>
-              If you are trying to learn 5 things at once you won't have proper
-              context for the concepts you are learning.
-            </ListItem>
+            <ListItem>Must have proper context </ListItem>
             <ListItem>Boundaries blurred</ListItem>
           </List>
         </Slide>
@@ -335,7 +278,10 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="When you don't have a proper context, it makes adding on to concepts later on more difficult and in turn your future learning of concepts will be slower"
+          notes="* This makes adding on to concepts later on more difficult<br /><br />
+           * Future learning of concepts will be slower.<br /><br />
+           * When you go to learn React + Apollo after learning react redux you have to learn the entirety of the stack all over again instead of just the new parts<br /><br />
+           * git merging in new content as oppose to starting a new file from scratch"
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -344,6 +290,7 @@ export default class Presentation extends React.Component {
             <ListItem>
               Future learning speed is slowed by not having proper context
             </ListItem>
+            <ListItem>git merge vs new file</ListItem>
           </List>
         </Slide>
         <Slide transition={['slide']} bgColor="secondary" textColor="primary">
@@ -359,7 +306,10 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="What I mean by promote is that you need to find things to get you excited. <br /> Example hobby projects.. raspberry pi beer brewing setup, bboytools, video therman"
+          notes="* What I mean by promote is that you need to find things to get you excited. <br /><br />
+            * Remember when you first started programing and everything seemed so fresh and exciting<br /><br />
+            * We need to find and harness that energy
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -371,7 +321,15 @@ export default class Presentation extends React.Component {
             </ListItem>
           </List>
         </Slide>
-        <Slide transition={['slide']} bgColor="primary" textColor="tertiary">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="tertiary"
+          notes="
+          * Why do we need to be excited?<br /><br />
+          * You enter flow, where time stops and you dial in.
+        "
+        >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               Flow
@@ -379,7 +337,16 @@ export default class Presentation extends React.Component {
             <ListItem>Flow happens when you are excited</ListItem>
           </List>
         </Slide>
-        <Slide transition={['slide']} bgColor="primary" textColor="tertiary">
+        <Slide
+          transition={['slide']}
+          bgColor="primary"
+          textColor="tertiary"
+          notes=" * How to get there?<br /><br />
+        * Harness the power of things that already make you excited.<br /><br />
+        * Pick projects that are based around your non-code related passions<br /><br />
+        * Example hobby projects.. raspberry pi beer brewing setup, bboytools, <br /><br />
+        "
+        >
           <List>
             <Heading size={2} textColor="secondary" textFont="secondary">
               Pick Your Projects
@@ -401,23 +368,31 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="The moment you think you are too smart, you've lost the game. I win by not being smart at all.<br />
-          I'm ready to learn<br />
-          I'm ready to keep an open mind<br />
-          I'm a student"
+          notes="
+          * The moment you think you are too smart, you've lost the game.<br /><br />
+          * You need the student mentality or else you miss learning opportunities<br /><br />
+          * The other day, I saw blog post headline about render props and thought... oh I know that, I don't need to read it<br /><br />
+          * I caught myself, opened it up and actually learned some new things I hadn't thought about before.
+          "
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
               Ego Trippin'
             </Heading>
             <ListItem>Check your ego. You aren’t that smart</ListItem>
+            <ListItem>I'm ready to learn</ListItem>
+            <ListItem>I'm ready to keep an open mind</ListItem>
+            <ListItem>I'm a student</ListItem>
           </List>
         </Slide>
         <Slide
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="When you are coding to learn. Stop worrying about getting everything right and break things. So much development happens in those moments where you are fixing problems that you created"
+          notes="* As someone who loves to code, this one gets me excited the most <br /><br />
+          * So you need to care less about everything and start writing more code without worrying about being judged.<br /><br /> 
+          * When you are coding to learn. Stop worrying about getting everything right and break things.<br /><br /> 
+          * So much development happens in those moments where you are fixing problems that you created"
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -431,10 +406,10 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="There are always going to be a ton of smarter people than you, use their brains.<br />
-          I don't know how many people remember the John Papa style guide..<br />
-          Alot of people might look at snippets as cheating leraning<br />
-          I see it as exposure to best practices<br />
+          notes="* There are always going to be a ton of smarter people than you, use them.<br /><br />
+          * I don't know how many people remember the John Papa style guide<br /><br />
+          * A lot of people might look at snippets as cheating learning<br /><br />
+          * I see it as exposure to best practices<br />
           "
         >
           <List>
@@ -458,7 +433,11 @@ export default class Presentation extends React.Component {
           transition={['slide']}
           bgColor="primary"
           textColor="tertiary"
-          notes="This is my They Live slides. Youre going to hear how people who talk about this stuff talk."
+          notes="* You're going to hear how people who talk about this stuff talk.<br /><br />
+          * Follow everything you can<br /><br />
+          * If you hear things enough, it will be how you talk about it naturally<br /><br />
+          * You will learn without even trying.<br /><br />
+          * I'd like to finish off with a quote from a smart individual"
         >
           <List>
             <Heading size={1} textColor="secondary" textFont="secondary">
@@ -477,34 +456,21 @@ export default class Presentation extends React.Component {
             <Cite>Ricky Bobby</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={['slide']} bgColor="tertiary" textColor="primary">
-          <Heading size={1} textColor="primary" textFont="secondary">
-            Find Me
-          </Heading>
-          <Text>Twitter & IG</Text>
-          <Text>@stolinski / @leveluptuts</Text>
-          <Text>Level Up Tutorials Youtube</Text>
-          <Link href="https://www.leveluptutorials.com/" target="_blank">
-            <Text>LevelUpTutorials.com</Text>
-          </Link>
-          <Link href="https://syntax.fm/" target="_blank">
-            <Text>Syntax.fm</Text>
-          </Link>
-        </Slide>
-        <Slide transition={['slide']} bgColor="primary">
-          <Heading size={1} textColor="secondary" textFont="secondary">
-            Support
-          </Heading>
-          <Image src={images.buyMyBook} />
-          <Text textColor="#FFF">Subscribe or Buy</Text>
-          <Link href="https://www.leveluptutorials.com/store" target="_blank">
-            <Text textColor="#FFF">LevelUpTutorials.com</Text>
-          </Link>
-        </Slide>
-        <Slide transition={['slide']} bgColor="primary">
+        <Slide transition={['slide']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" textFont="secondary">
             Thanks!
           </Heading>
+          <List textAlign="center">
+            <Text textColor="tertiary">Twitter & IG</Text>
+            <Text textColor="tertiary">@stolinski / @leveluptuts</Text>
+            <Text textColor="tertiary">Level Up Tutorials Youtube</Text>
+            <Link href="https://www.leveluptutorials.com/" target="_blank">
+              <Text textColor="tertiary">LevelUpTutorials.com</Text>
+            </Link>
+            <Link href="https://syntax.fm/" target="_blank">
+              <Text textColor="tertiary">Syntax.fm</Text>
+            </Link>
+          </List>
         </Slide>
       </Deck>
     );
